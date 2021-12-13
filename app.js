@@ -16,13 +16,15 @@ addEventListener("keypress", (event) => {
     }
 })
 
+
+
 let statsCanvas = document.createElement("canvas");
 statsCanvas.width = game.renderer.canvas.width;
 statsCanvas.height = game.renderer.canvas.height / 2;
 let ctx = statsCanvas.getContext("2d")
 ctx.textAlign = "center"
 ctx.font = `${statsCanvas.width / 60}px arial`
-ctx.fillText("Press SPACE for a ball.", statsCanvas.width / 6, statsCanvas.height / 8)
+ctx.createImageData("images/Backgrounds/Score-Board-Frame.png", statsCanvas.width / 6, statsCanvas.height / 8)
 statsCanvas.style = "position: absolute; left: 8px; top: 8px; z-index: 1;"
 
 console.log(document.body.appendChild(statsCanvas))
